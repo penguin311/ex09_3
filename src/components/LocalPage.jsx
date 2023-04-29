@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Row, Col, Table, Form, Button } from 'react-bootstrap'
+import MapPage from './MapPage';
 
 const LocalPage = () => {
     const [locals, setLocals] = useState([]);
@@ -56,6 +57,7 @@ const LocalPage = () => {
                                 <td>장소명</td>
                                 <td>주소</td>
                                 <td>전화</td>
+                                <td>위치</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -64,6 +66,7 @@ const LocalPage = () => {
                                     <td>{local.place_name}</td>
                                     <td>{local.phone}</td>
                                     <td>{local.address_name}</td>
+                                    <td><MapPage local={local}/></td>
                                 </tr>
                             )}
                         </tbody>
