@@ -64,8 +64,8 @@ const LocalPage = () => {
                             {locals.map(local =>
                                 <tr key={local.id}>
                                     <td>{local.place_name}</td>
-                                    <td>{local.phone}</td>
                                     <td>{local.address_name}</td>
+                                    <td>{local.phone}</td>
                                     <td><MapPage local={local}/></td>
                                 </tr>
                             )}
